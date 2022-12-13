@@ -57,6 +57,88 @@ fun main(args: Array<String>) {
     sumaCuatro.sumar()
 
     println(Suma.historialSuma)
+
+    // ----------------------------------------------------------------------------------------------
+    // Arreglos
+    // Arreglos estáticos
+    val arregloEstatico: Array<Int> = arrayOf(1, 2, 3);
+    println(arregloEstatico);
+
+    // Arreglos dinámicos
+    val arregloDinamico: ArrayList<Int> = arrayListOf(1, 2, 4, 5, 6, 7, 8, 9, 10);
+    println(arregloDinamico);
+    arregloDinamico.add(11);
+    arregloDinamico.add(12);
+    println(arregloDinamico);
+
+    // ----------------------------------------------------------------------------------------------
+    // Operadores -> Sirven para los arreglos estáticos y dinámicos
+    // For Each -> Unit
+    val respuestaForEach: Unit = arregloDinamico.forEach { valorActual: Int ->
+        println("Valor actual: $valorActual");
+    }
+
+    arregloEstatico.forEachIndexed { indice: Int, valorActual: Int ->
+        println("Valor actual: $valorActual, indice: $indice");
+    }
+
+    print(respuestaForEach);
+
+    // ----------------------------------------------------------------------------------------------
+    // Map -> muta el arreglo (Cambia el arreglo)
+    // 1. Enviemos el nuevo valor de la iteración
+    // 2. Nos devuelve un nuevo arreglo con los valores modificados
+
+    val respuestaMap: List<Double> = arregloDinamico.map { valorActual: Int -> toDoublePlus100(valorActual) };
+    //    return@map valorActual.toDouble() + 100.0;
+    //}
+
+    println(respuestaMap);
+
+    val respuestaMapDos = arregloDinamico.map { it + 15 };
+
+    // ----------------------------------------------------------------------------------------------
+    // Filter -> Filtra el arreglo (No cambia el arreglo)
+    // 1. Devolver una expresión booleana
+    // 2. Nuevo arreglo Filtrado
+    val respuestaFilter: List<Int> = arregloDinamico.filter { valorActual: Int ->
+        val mayoresACinco: Boolean = valorActual > 5;
+        return@filter mayoresACinco;
+    }
+
+    val respuestaFilterDos = arregloDinamico.filter { it > 5 };
+
+    println(respuestaFilter);
+    println(respuestaFilterDos);
+
+    // ----------------------------------------------------------------------------------------------
+    // OR, AND
+    // OR -> any
+    // AND -> all
+
+    // ¿Hay algún valor mayor a 5?
+    val respuestaAny: Boolean = arregloDinamico
+        .any { valorActual: Int ->
+            return@any (valorActual > 5);
+        }
+    println(respuestaAny);
+
+    // ¿Todos los valores son mayores a 5?
+    val respuestaAll: Boolean = arregloDinamico.all { x: Int -> return@all (x > 5) }
+    println(respuestaAll);
+
+    // ----------------------------------------------------------------------------------------------
+    // Reduce -> Reduce el arreglo a un solo valor
+    // 1. Valor acumulado (Inicialmente el primer valor del arreglo)
+    // 2. Valor actual
+    // 3. Nuevo valor acumulado
+    val respuestaReduce: Int = arregloDinamico.reduce { valorAcumulado: Int, valorActual: Int ->
+        return@reduce valorAcumulado + valorActual;
+    }
+}
+
+fun toDoublePlus100(valorActual: Int): Double {
+    return valorActual.toDouble() + 100.0;
 }
 
 // Funciones
