@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">MovCGBV</string>
-    <string name="hola_mundo">Hola mundo landscape</string>
-    <color name="color_hola_mundo">#000</color>
-</resources>
