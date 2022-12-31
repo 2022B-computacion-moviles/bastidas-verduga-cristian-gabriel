@@ -6,6 +6,7 @@ class Estudiante(
     var direccion: String,
     var materias: List<Materia>,
     var costoCredito: Double,
+    val beca: Boolean
 ) {
     /**
      * Ingresa una nueva materia al estudiante
@@ -53,6 +54,6 @@ class Estudiante(
      */
     override fun toString(): String {
         val numero_materias: Int = materias.size;
-        return "$id\t$nombre\t$apellido\t$fechaNacimiento\t$direccion\t$costoCredito\t$numero_materias"
+        return "$id\t$nombre\t$apellido\t$fechaNacimiento\t$direccion\t$costoCredito\t$numero_materias\t$beca"
     }
 }
