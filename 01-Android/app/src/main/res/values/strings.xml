@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MovCompCGBV</string>
+    <string name="hola_mundo">Holi</string>
+    <color name="color_hola">#FFCC00</color>
 </resources>
