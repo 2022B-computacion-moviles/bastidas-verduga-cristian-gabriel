@@ -98,7 +98,7 @@ class BListView : AppCompatActivity() {
 
 
     fun anadirEntrenador(adaptador: ArrayAdapter<BEntrenador>) {
-        arreglo.add(BEntrenador("Senku", "Ishigami"))
+        arreglo.add(BEntrenador(1,"Senku", "Ishigami"))
         adaptador.notifyDataSetChanged()
     }
 }

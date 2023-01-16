@@ -26,12 +26,7 @@ class MainActivity : AppCompatActivity() {
                     if (result.data!!.data != null) {
                         val uri = result.data!!.data!!
                         val cursor = contentResolver.query(
-                            uri,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
+                            uri, null, null, null, null, null
                         )
                         cursor?.moveToFirst()
                         val indiceTelefono = cursor?.getColumnIndex(
@@ -62,8 +57,7 @@ class MainActivity : AppCompatActivity() {
         val botonIntentImplicito = findViewById<Button>(R.id.btn_intent_implicito)
         botonIntentImplicito.setOnClickListener {
             val intentConRespuesta = Intent(
-                Intent.ACTION_PICK,
-                ContactsContract.CommonDataKinds.Phone.CONTENT_URI
+                Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI
             )
             contenidoIntentImplicito.launch(intentConRespuesta)
         }
@@ -76,12 +70,14 @@ class MainActivity : AppCompatActivity() {
 
     fun abrirActividadConParametros(clase: Class<*>) {
         val intentExplicito = Intent(
-            this,
-            clase
+            this, clase
         )
         intentExplicito.putExtra("nombre", "Cristian")
         intentExplicito.putExtra("apellido", "Bastidas")
         intentExplicito.putExtra("edad", 100)
+        intentExplicito.putExtra(
+            "Entrenador", BEntrenador(5,"Cristian", "Bastidas")
+        )
         contenidoIntentExplicito.launch(intentExplicito)
     }
 
