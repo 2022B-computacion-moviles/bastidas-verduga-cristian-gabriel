@@ -41,10 +41,10 @@
         android:id="@+id/btn_dar_like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="72dp"
         android:text="Dar like"
         app:layout_constraintEnd_toEndOf="@+id/tv_likes"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="@+id/tv_likes"
         app:layout_constraintTop_toBottomOf="@+id/tv_likes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

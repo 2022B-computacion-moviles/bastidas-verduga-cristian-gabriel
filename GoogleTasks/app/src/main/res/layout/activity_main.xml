@@ -6,31 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-42dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <!-- Center aligned Top app bar -->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/top_app_bar"
+                style="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:title="Tasks"
+                app:titleCentered="true" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_account"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/btn_account_content_description"
+            app:icon="@drawable/baseline_account_circle_24"
+            app:iconSize="32dp"
+            app:layout_anchor="@id/top_app_bar"
+            app:layout_anchorGravity="end|center_vertical" />
+
+        <!-- Bottom app bar -->
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_app_bar"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="80dp"
             android:layout_gravity="bottom"
-            app:backgroundTint="@color/design_default_color_background"
-            app:fabAlignmentMode="center"
-            app:fabCradleVerticalOffset="10dp"
-            app:navigationIcon="@drawable/baseline_menu_24" />
+            app:fabAlignmentMode="end"
+            app:fabCradleVerticalOffset="10dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_bottom_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/fab_content_description"
             android:src="@drawable/baseline_add_24"
-            app:backgroundTint="@color/design_default_color_background"
             app:fabSize="normal"
             app:layout_anchor="@id/bottom_app_bar" />
 
+        <!-- Standard icon buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_menu"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:icon="@drawable/baseline_list_alt_24"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:layout_anchorGravity="start|bottom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sort"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:icon="@drawable/baseline_import_export_24"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:layout_anchorGravity="start|bottom" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

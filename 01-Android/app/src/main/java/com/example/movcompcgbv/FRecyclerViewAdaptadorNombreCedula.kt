@@ -29,6 +29,7 @@ class FRecyclerViewAdaptadorNombreCedula(
         fun anadirlike() {
             numeroLikes++;
             likesTextView.text = numeroLikes.toString();
+            contexto.aumentarTotalLikes()
         }
     }
 

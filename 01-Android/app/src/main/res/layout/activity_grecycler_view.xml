@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_entrenadores"
         android:layout_width="340dp"
         android:layout_height="605dp"
         app:layout_constraintBottom_toBottomOf="parent"
