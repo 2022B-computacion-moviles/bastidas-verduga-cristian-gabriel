@@ -2,4 +2,5 @@
     <string name="app_name">GoogleTasks</string>
     <string name="fab_content_description">FAB</string>
     <string name="btn_account_content_description">Navigation</string>
+    <string name="my_tasks">My tasks</string>
 </resources>
