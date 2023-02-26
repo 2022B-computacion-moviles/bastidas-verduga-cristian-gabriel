@@ -1,12 +1,12 @@
 package com.example.googletasks
 
+import MenuElement
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.android.material.checkbox.MaterialCheckBox
 import androidx.recyclerview.widget.RecyclerView
 
 class MenuAdapter(
@@ -20,12 +20,12 @@ class MenuAdapter(
 
         init {
             icon = itemView.findViewById(R.id.iv_icon)
-            title = itemView.findViewById(R.id.text_title)
+            title = itemView.findViewById(R.id.tv_title)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.list_element, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.list_dialog, parent, false)
         return ViewHolder(view)
     }
 
@@ -36,6 +36,8 @@ class MenuAdapter(
             0 -> holder.icon.setImageResource(R.drawable.baseline_add_24)
             1 -> holder.icon.setImageResource(R.drawable.baseline_import_export_24)
             2 -> holder.icon.setImageResource(R.drawable.baseline_list_alt_24)
+            3 -> holder.icon.setImageResource(R.drawable.baseline_star_24)
+            4 -> holder.icon.setImageResource(R.drawable.baseline_account_circle_24)
         }
     }
 

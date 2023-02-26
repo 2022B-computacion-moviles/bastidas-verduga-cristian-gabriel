@@ -1,7 +1,8 @@
-package com.example.googletasks
+import java.io.Serializable
 
 class MenuElement(
-    var title: String, var icon: Int
-) {
-
+    var title: String,
+    var icon: Int
+) : Serializable {
+    // class implementation
 }
