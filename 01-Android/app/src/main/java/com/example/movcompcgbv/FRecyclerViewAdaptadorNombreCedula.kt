@@ -35,7 +35,7 @@ class FRecyclerViewAdaptadorNombreCedula(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
-            R.layout.recyclre_view_vista,
+            R.layout.recycler_view_vista,
             parent,
             false
         )
