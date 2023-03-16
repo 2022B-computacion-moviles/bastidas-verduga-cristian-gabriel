@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearEditarMateria">
+
+    <EditText
+        android:id="@+id/et_materia_aula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="G1"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_codigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_codigo"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_codigo" />
+
+    <EditText
+        android:id="@+id/et_materia_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="Id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_materia_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Guardar Materia"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_costo"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_costo"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_costo" />
+
+    <EditText
+        android:id="@+id/et_materia_costo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1.2"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_credito"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_credito"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_credito" />
+
+    <EditText
+        android:id="@+id/et_materia_credito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_aula"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_aula"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_aula" />
+
+    <EditText
+        android:id="@+id/et_materia_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="MAT123"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_nombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_nombre" />
+
+    <EditText
+        android:id="@+id/et_materia_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Materia"
+        app:layout_constraintEnd_toEndOf="@+id/et_materia_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_materia_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_materia_id" />
+</androidx.constraintlayout.widget.ConstraintLayout>
