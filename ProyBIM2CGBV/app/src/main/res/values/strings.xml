@@ -1,21 +1,6 @@
 <resources>
     <string name="app_name">StudyDeck</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-
     <string name="logo_description">StudyDeck</string>
     <string name="email_hint">Correo Electrónico</string>
     <string name="email_icon_description">Icono de correo electrónico</string>
@@ -24,5 +9,19 @@
     <string name="login_button">Iniciar Sesión</string>
     <string name="register_button">Registrarse</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="password_confirm_hint">Repite tu contraseña</string>
+    <string name="user_icon_description">Icono usuario</string>
+    <string name="forgot_button">Recuperar contraseña</string>
+    <string name="btn_account_content_description">Cerrar sesión</string>
+    <string name="fab_content_description">Añadir carta</string>
+    <string name="new_card_dialog_title">Nueva tarjeta</string>
+    <string name="new_card_dialog_subtitle"></string>
+    <string name="new_card_icon_description">\"\"</string>
+    <string name="new_card_title_hint">Título</string>
+    <string name="new_card_content_hint">Contenido</string>
+    <string name="collections">Colecciones</string>
+    <string name="collection_name">Nombre de colección</string>
+    <string name="new_collection_dialog_title">Nueva colección</string>
 
 </resources>

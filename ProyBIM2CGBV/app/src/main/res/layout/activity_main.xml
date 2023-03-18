@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--app:title="@string/register_button"-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_account"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/btn_account_content_description"
+            app:icon="@drawable/baseline_account_circle_24"
+            app:iconSize="32dp"
+            app:layout_anchor="@id/main_app_bar"
+            app:layout_anchorGravity="end|center_vertical" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/main_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:title="@string/app_name" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_content_description"
+        android:src="@drawable/baseline_play_circle_outline_24"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/main_fab_add"
+        app:layout_constraintEnd_toStartOf="@+id/main_fab_add"
+        app:layout_constraintTop_toTopOf="@+id/main_fab_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab_add"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_content_description"
+        android:src="@drawable/baseline_add_48"
+        app:fabCustomSize="80dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="48dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_content_description"
+        android:src="@drawable/baseline_folder_open_24"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/main_fab_add"
+        app:layout_constraintStart_toEndOf="@+id/main_fab_add"
+        app:layout_constraintTop_toTopOf="@+id/main_fab_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
