@@ -30,6 +30,15 @@
             app:title="@string/collections" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    <GridView
+        android:id="@+id/gv_collections"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="108dp" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/collections_fab_add"
         android:layout_width="80dp"

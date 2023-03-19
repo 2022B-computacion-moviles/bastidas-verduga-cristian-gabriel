@@ -58,7 +58,7 @@
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_username_register"
+        android:id="@+id/username_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -70,13 +70,14 @@
         app:startIconDrawable="@drawable/baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_email_register"
+        android:id="@+id/email_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -84,18 +85,19 @@
         android:hint="@string/email_hint"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/et_username_register"
+        app:layout_constraintTop_toBottomOf="@+id/username_register"
         app:startIconContentDescription="@string/email_icon_description"
         app:startIconDrawable="@drawable/baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_password_register"
+        android:id="@+id/password_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -103,19 +105,20 @@
         android:hint="@string/password_hint"
         app:endIconMode="password_toggle"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_register"
+        app:layout_constraintTop_toBottomOf="@+id/email_register"
         app:startIconContentDescription="@string/password_icon_description"
         app:startIconDrawable="@drawable/baseline_password_24"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_password_confirm_register"
+        android:id="@+id/password_confirm_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -123,19 +126,20 @@
         android:hint="@string/password_confirm_hint"
         app:endIconMode="password_toggle"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_register"
+        app:layout_constraintTop_toBottomOf="@+id/password_register"
         app:startIconContentDescription="@string/password_icon_description"
         app:startIconDrawable="@drawable/baseline_password_24"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password_confirm_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_register_login"
+        android:id="@+id/btn_register_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -144,8 +148,8 @@
         android:padding="15dp"
         android:text="@string/register_button"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_password_confirm_register"
-        app:layout_constraintStart_toStartOf="@+id/et_password_confirm_register"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_confirm_register" />
+        app:layout_constraintEnd_toEndOf="@+id/password_confirm_register"
+        app:layout_constraintStart_toStartOf="@+id/password_confirm_register"
+        app:layout_constraintTop_toBottomOf="@+id/password_confirm_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

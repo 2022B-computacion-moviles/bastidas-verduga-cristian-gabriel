@@ -14,6 +14,9 @@ class CollectionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collections)
 
+        val bundle = intent.extras
+        val email = bundle?.getString("email")
+
         val btnBack = findViewById<MaterialToolbar>(R.id.collections_app_bar)
         btnBack.setOnClickListener {
             finish()
@@ -25,11 +28,12 @@ class CollectionsActivity : AppCompatActivity() {
                 this,
                 layoutInflater.inflate(R.layout.activity_new_collection, null),
                 resources.getString(R.string.new_collection_dialog_title),
+                email.toString()
             )
         }
     }
 
-    fun newDialog(context: Context, activity: View, title: String) {
+    private fun newDialog(context: Context, activity: View, title: String, email: String) {
         var collectionName: String
         //Removed: setMessage()
         MaterialAlertDialogBuilder(context).setTitle(title).setView(activity)
@@ -37,6 +41,10 @@ class CollectionsActivity : AppCompatActivity() {
                 collectionName = activity.findViewById<TextInputEditText>(
                     R.id.et_name_new_collection
                 ).text.toString()
+
+                AlertsFirebaseHelpers.createCollection(
+                    email, Collection(collectionName, ArrayList())
+                )
             }.setNegativeButton("Cancelar") { dialog, which ->
                 // Respond to negative button press
             }.show()

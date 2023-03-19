@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112490211260",
+    "project_id": "studydeck-2c200",
+    "storage_bucket": "studydeck-2c200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112490211260:android:41b83f176d618262b9edb9",
+        "android_client_info": {
+          "package_name": "com.example.proybim2cgbv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112490211260-qc9pqus69gvlmale8uqpme4oc9cb3me6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDylhNLE-Ac4HPSvSkGdbzuOhlYA9Rfmck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112490211260-qc9pqus69gvlmale8uqpme4oc9cb3me6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

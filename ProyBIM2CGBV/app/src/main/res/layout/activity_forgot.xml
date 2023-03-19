@@ -55,7 +55,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_email_forgot"
+        android:id="@+id/email_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -67,6 +67,7 @@
         app:startIconDrawable="@drawable/baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_forgot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
@@ -74,7 +75,7 @@
 
 
     <Button
-        android:id="@+id/btn_register_login"
+        android:id="@+id/btn_forgot_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -83,9 +84,9 @@
         android:padding="15dp"
         android:text="@string/forgot_button"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_email_forgot"
-        app:layout_constraintStart_toStartOf="@+id/et_email_forgot"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_forgot" />
+        app:layout_constraintEnd_toEndOf="@+id/email_forgot"
+        app:layout_constraintStart_toStartOf="@+id/email_forgot"
+        app:layout_constraintTop_toBottomOf="@+id/email_forgot" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
