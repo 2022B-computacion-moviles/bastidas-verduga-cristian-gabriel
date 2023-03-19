@@ -32,16 +32,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hipotenusa"
-                android:textAppearance="?attr/textAppearanceTitleLarge" />
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/play_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Es la suma de los cuadrados de los catetos"
+                android:layout_margin="8dp"
+                android:text="Es la raíz de la suma de los cuadrados de los catetos"
+                android:textAlignment="center"
                 android:textAppearance="?attr/textAppearanceBodyMedium"
                 android:textColor="?android:attr/textColorSecondary"
+                android:textSize="20sp"
                 android:visibility="invisible" />
         </LinearLayout>
 

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/card_menu_edit"
+        android:id="@+id/collection_menu_edit"
         android:icon="@drawable/baseline_edit_24"
         android:title="Editar" />
     <item
-        android:id="@+id/card_menu_delete"
+        android:id="@+id/collection_menu_delete"
         android:icon="@drawable/baseline_delete_forever_24"
         android:title="Eliminar" />
-    <item
-        android:id="@+id/card_menu_add"
-        android:icon="@drawable/baseline_add_48"
-        android:title="Añadir a colleción" />
 </menu>

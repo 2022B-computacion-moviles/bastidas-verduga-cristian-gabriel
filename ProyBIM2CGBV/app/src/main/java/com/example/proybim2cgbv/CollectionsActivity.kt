@@ -3,13 +3,20 @@ package com.example.proybim2cgbv
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
+import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
+import android.widget.GridView
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
 
 class CollectionsActivity : AppCompatActivity() {
+
+    var selectedCollection: Collection? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collections)
@@ -31,13 +38,52 @@ class CollectionsActivity : AppCompatActivity() {
                 email.toString()
             )
         }
+
+        loadCollections()
     }
+
+    private fun loadCollections() {
+        val gridView = findViewById<GridView>(R.id.gv_collections)
+        AlertsFirebaseHelpers.getCollectionByEmail { collections ->
+            val collectionAdapter = CollectionAdapter(this, collections)
+            gridView.adapter = collectionAdapter
+            collectionAdapter.notifyDataSetChanged()
+            registerForContextMenu(gridView)
+        }
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        val gridView = findViewById<GridView>(R.id.gv_collections)
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_collection, menu)
+        val info = menuInfo as AdapterView.AdapterContextMenuInfo
+        selectedCollection = gridView.getItemAtPosition(info.position) as Collection
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        val collection = selectedCollection!!
+        return when (item.itemId) {
+            R.id.collection_menu_edit -> {
+                //
+                true
+            }
+            R.id.collection_menu_delete -> {
+                AlertsFirebaseHelpers.deleteCollection(collection)
+                loadCollections()
+                true
+            }
+            else -> super.onContextItemSelected(item)
+        }
+    }
+
 
     private fun newDialog(context: Context, activity: View, title: String, email: String) {
         var collectionName: String
         //Removed: setMessage()
         MaterialAlertDialogBuilder(context).setTitle(title).setView(activity)
-            .setPositiveButton("Crear") { dialog, which ->
+            .setPositiveButton("Crear") { _, _ ->
                 collectionName = activity.findViewById<TextInputEditText>(
                     R.id.et_name_new_collection
                 ).text.toString()
@@ -45,7 +91,8 @@ class CollectionsActivity : AppCompatActivity() {
                 AlertsFirebaseHelpers.createCollection(
                     email, Collection(collectionName, ArrayList())
                 )
-            }.setNegativeButton("Cancelar") { dialog, which ->
+                loadCollections()
+            }.setNegativeButton("Cancelar") { _, _ ->
                 // Respond to negative button press
             }.show()
     }
